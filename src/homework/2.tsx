@@ -1,5 +1,13 @@
-import React, {useReducer} from "react";
+import React, { useReducer } from "react";
 
+type State = {
+ isRequestInProgress: boolean;
+  requestStep: 'start' | 'pending' | 'finished' | 'idle';
+}
+
+type Action = {
+  type: string;
+}
 const initialState: State = {
   isRequestInProgress: false,
   requestStep: 'idle',
